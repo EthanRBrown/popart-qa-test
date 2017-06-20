@@ -5,7 +5,7 @@ function calculateResistance(resistors) {
 	return 1/Object.values(resistors.byId).map(r => 1/r).reduce((a, r) => a + r, 0)
 }
 
-const resistors = (state = { resistance: NaN, byId: {}, commonResistors: [1000] }, action) => {
+const resistors = (state = { resistance: NaN, byId: { '1': 10, '2': 10 }, commonResistors: [10, 220, 1000] }, action) => {
 
 	switch(action.type) {
 
@@ -18,12 +18,19 @@ const resistors = (state = { resistance: NaN, byId: {}, commonResistors: [1000] 
 				},
 			}
 			newState.resistance = calculateResistance(newState)
+			return newState
 		}
 
 		case ActionTypes.SET_COMMON_RESISTORS: {
+			return state
 		}
 
 		case ActionTypes.SEEK_RESISTANCE: {
+			return state
+		}
+
+		default: {
+			return state
 		}
 
 	}
@@ -35,7 +42,7 @@ function setDlgValue(state, name, key, value) {
 			...state,
 			dialogs: {
 				...state.dialogs,
-				[ame]: {
+				[name]: {
 					...dlg,
 					[key]: value,
 				}
@@ -47,16 +54,19 @@ const ui = (state = { dialogs: {} }, action) => {
 
 	switch(action.type) {
 		case ActionTypes.SHOW_DIALOG: {
-			setDlgValue(state, action.name, 'isShown', true)
+			return setDlgValue(state, action.name, 'isShown', true)
 		}
 		case ActionTypes.HIDE_DIALOG: {
-			setDlgValue(state, action.name, 'isShown', false)
+			return setDlgValue(state, action.name, 'isShown', false)
 		}
 		case ActionTypes.TOGGLE_DIALOG: {
-			setDlgValue(state, action.name, 'isShown', !state.dialogs[action.name].isShown)
+			return setDlgValue(state, action.name, 'isShown', !state.dialogs[action.name].isShown)
 		}
 		case ActionTypes.SET_DIALOG_DATA: {
-			setDlgValue(state, action.name, action.key, action.value)
+			return setDlgValue(state, action.name, action.key, action.value)
+		}
+		default: {
+			return state
 		}
 	}
 }
