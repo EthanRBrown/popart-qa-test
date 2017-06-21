@@ -3,7 +3,8 @@ import { connect } from 'react-redux'
 import ColHeader from './ColHeader'
 
 const lineStyle = { stroke: 'black', strokeWidth: 0.2, fill: 'none' }
-const rLabelStyle = { fontSize: '6px' }
+// TODO: pick a better monospace font
+const rLabelStyle = { fontSize: '6px', fontFamily: 'monospace' }
 
 // currently only works for drawing vertically-oriented resistors
 const Resistor = props => {
