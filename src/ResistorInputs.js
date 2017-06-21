@@ -1,9 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { Form, FormGroup, Label, Input } from 'reactstrap'
+import { FormGroup, Label, Input } from 'reactstrap'
 import { Col } from 'reactstrap'
 import { Button } from 'reactstrap'
-import { setResistorValue } from './actions'
+import { setResistorValue, showDialog } from './actions'
+import ColHeader from './ColHeader'
+import SeekDialog from './SeekDialog'
 
 class ResistorInputs extends React.Component {
 	constructor(props, ...args) {
@@ -13,31 +15,35 @@ class ResistorInputs extends React.Component {
 	}
 	render() {
 		return <div>
-			<h2>Inputs</h2>
+      <ColHeader title="Inputs" />
 			<div>
-				<h3>Equiv. R: {this.props.resistors.resistance}</h3>
-				<Form>
-					<FormGroup row>
-						<Label sm={2}>R1</Label>
-						<Col sm={10}>
-							<Input type="number" name="R1" onChange={this.setR1} value={this.props.resistors.byId['1']} />
-						</Col>
-					</FormGroup>
-					<FormGroup row>
-						<Label sm={2}>R2</Label>
-						<Col sm={10}>
-							<Input type="number" name="R2" onChange={this.setR2} value={this.props.resistors.byId['2']} />
-						</Col>
-					</FormGroup>
-					<FormGroup>
-						<Button>Seek</Button>
-					</FormGroup>
-				</Form>
+        <FormGroup row>
+          <Label sm={2}>R<sub>equiv</sub></Label>
+          <Col sm={10}>
+            <Input type="number" disabled value={this.props.resistors.parallelResistance} />
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label sm={2}>R<sub>1</sub></Label>
+          <Col sm={10}>
+            <Input type="number" name="R1" onChange={this.setR1} value={this.props.resistors.byId['1']} />
+          </Col>
+        </FormGroup>
+        <FormGroup row>
+          <Label sm={2}>R<sub>2</sub></Label>
+          <Col sm={10}>
+            <Input type="number" name="R2" onChange={this.setR2} value={this.props.resistors.byId['2']} />
+          </Col>
+        </FormGroup>
+        <FormGroup>
+          <Button color="primary" onClick={() => this.props.showDialog('seek')}>Seek</Button>
+        </FormGroup>
+				<SeekDialog />
 			</div>
 		</div>
 	}
 }
 
-const mapDispatchToProps = { setResistorValue }
+const mapDispatchToProps = { setResistorValue, showDialog }
 
 export default connect(s => s, mapDispatchToProps)(ResistorInputs)

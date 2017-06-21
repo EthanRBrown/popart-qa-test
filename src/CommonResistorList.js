@@ -1,8 +1,9 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import ColHeader from './ColHeader'
 
 const CommonResistorList = props => <div>
-    <h2>Common Resistors</h2>
+    <ColHeader title="Inputs" />
     <ul>
       {props.resistors.commonResistors.map((r, idx) => <li key={idx}>{r}</li>)}
     </ul>

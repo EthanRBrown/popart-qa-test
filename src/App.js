@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 
 import CommonResistorList from './CommonResistorList'
 import ResistorInputs from './ResistorInputs'
-import ResistorDiagram from './ResistorDiagram'
+import ResistorSchematic from './ResistorSchematic'
 
 class App extends Component {
   render() {
@@ -18,7 +18,7 @@ class App extends Component {
 						<ResistorInputs />
 					</Col>
 					<Col sm="3">
-						<ResistorDiagram />
+						<ResistorSchematic />
 					</Col>
 				</Row>
 			</Container>

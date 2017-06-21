@@ -11,7 +11,8 @@ export const SEEK_RESISTANCE = 'SEEK_RESISTANCE'
 
 export const showDialog = name => ({ type: SHOW_DIALOG, name })
 export const hideDialog = name => ({ type: HIDE_DIALOG, name })
-export const setDialogData = (key, value) => ({ type: SET_DIALOG_DATA, key, value })
+export const toggleDialog = name => ({ type: TOGGLE_DIALOG, name })
+export const setDialogData = (name, key, value) => ({ type: SET_DIALOG_DATA, name, key, value })
 
 export const setCommonResistors = data => ({ type: SET_COMMON_RESISTORS, data })
 

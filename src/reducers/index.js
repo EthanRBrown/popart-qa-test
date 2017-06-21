@@ -1,11 +1,20 @@
 import * as ActionTypes from '../actions'
 import { combineReducers } from 'redux'
 
-function calculateResistance(resistors) {
-	return 1/Object.values(resistors.byId).map(r => 1/r).reduce((a, r) => a + r, 0)
+function calculateParallelResistance(resistances) {
+	return 1/resistances.map(r => 1/r).reduce((a, r) => a + r, 0)
 }
 
-const resistors = (state = { resistance: NaN, byId: { '1': 10, '2': 10 }, commonResistors: [10, 220, 1000] }, action) => {
+let initialResistorsState = {
+	byId: {
+		'1': 10,
+		'2': 10,
+	},
+	commonResistors: [10, 220, 1000],
+}
+initialResistorsState.parallelResistance = calculateParallelResistance(Object.values(initialResistorsState.byId))
+
+const resistors = (state = initialResistorsState, action) => {
 
 	switch(action.type) {
 
@@ -17,7 +26,7 @@ const resistors = (state = { resistance: NaN, byId: { '1': 10, '2': 10 }, common
 					[action.id]: action.value,
 				},
 			}
-			newState.resistance = calculateResistance(newState)
+			newState.parallelResistance = calculateParallelResistance(Object.values(newState.byId))
 			return newState
 		}
 
@@ -26,7 +35,29 @@ const resistors = (state = { resistance: NaN, byId: { '1': 10, '2': 10 }, common
 		}
 
 		case ActionTypes.SEEK_RESISTANCE: {
-			return state
+			const resistors = state.commonResistors
+			const combinations = []
+			// brute force, boo!
+			for(let i=0; i<resistors.length; i++) {
+				for(let j=i; j<resistors.length; j++) {
+					const r1 = resistors[i]
+					const r2 = resistors[j]
+					const req = calculateParallelResistance([r1, r2])
+					const err = Math.abs(req - action.targetResistance)
+					combinations.push({ r1, r2, req, err })
+				}
+			}
+			const bestFit = combinations.sort((a, b) => a.err - b.err)[0]
+			const newState = {
+				...state,
+				byId: {
+					...state.byId,
+					1: bestFit.r1,
+					2: bestFit.r2,
+				}
+			}
+			newState.parallelResistance = calculateParallelResistance(Object.values(newState.byId))
+			return newState
 		}
 
 		default: {
@@ -37,7 +68,7 @@ const resistors = (state = { resistance: NaN, byId: { '1': 10, '2': 10 }, common
 }
 
 function setDlgValue(state, name, key, value) {
-		const dlg = state.dialogs[name]
+		const dlg = state.dialogs[name] || { isShown: false }
 		return {
 			...state,
 			dialogs: {
@@ -50,7 +81,11 @@ function setDlgValue(state, name, key, value) {
 		}
 }
 
-const ui = (state = { dialogs: {} }, action) => {
+const dialogs = {
+  seek: { isShown: false, parallelResistance: 100 }
+}
+
+const ui = (state = { dialogs }, action) => {
 
 	switch(action.type) {
 		case ActionTypes.SHOW_DIALOG: {
