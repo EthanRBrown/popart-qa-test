@@ -25,11 +25,11 @@ Our ERP system exposes a REST JSON endpoint that provides commonly-available res
   1. Resistor values should be displayed in [engineering notation](https://en.wikipedia.org/wiki/Engineering_notation) using SI prefixes with a maximum of one decimal.  The system does not need to support resistances greater than 988 MΩ or lower than 10 Ω.
 	1. Resistance entry should either A) support ONLY numeric entry or B) support ONLY numeric entry followed by 'k', 'M', 'kΩ', or 'MΩ' with an optional space.
 	1. If the REST JSON endpoint that provides commonly-available resistor values is unavailable, the calculator should use the list of common resistor values in Appendix A below.  In this instance, the UI should clearly indicate that a standard table is being used/displayed, and actual ERP data is unavailable.
-	1. One one screen (scrolling acceptable), the user should see the list of common resistor values; inputs for two resistors (R<sub>1</sub> and R<sub>2</sub>) and the equivalent resistance (R<sub>equiv</sub>); and a schematic representation of the two resistors with their lables and values, using standard electrical engineering schematic notaiton.
-	1. There should be a "Seek" button that allows the user to enter a target resistance, and then choose values for R<sub>1</sub> and R<sub>2</sub> such that R<sub>equiv</sub> is as close as possible to the requested target resistance using only common resistor values list.
+	1. One one screen (scrolling acceptable), the user should see the list of common resistor values; inputs for two resistors (R1 and R2) and the equivalent resistance (Requiv); and a schematic representation of the two resistors with their lables and values, using standard electrical engineering schematic notaiton.
+	1. There should be a "Seek" button that allows the user to enter a target resistance, and then choose values for R1 and R2 such that Requiv is as close as possible to the requested target resistance using only common resistor values list.
 1. Functionality
-  1. R<sub>equiv</sub> should be calculated using the formula 1/R<sub>equiv</sub> = 1/R<sub>1</sub> + 1/R<sub>2</sub>.
-  1. The "seek" function should choose a combination of two resistors from the list of common resistors such that the equivalent resistance is as cloase as possible to the requested resistance (R<sub>1</sub> and R<sub>2</sub> may be equal).
+  1. Requiv should be calculated using the formula 1/Requiv = 1/R1 + 1/R2.
+  1. The "seek" function should choose a combination of two resistors from the list of common resistors such that the equivalent resistance is as cloase as possible to the requested resistance (R1 and R2 may be equal).
 
 ### Future Scope
 
