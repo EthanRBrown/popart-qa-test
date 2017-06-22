@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import { connect } from 'react-redux'
 
 import CommonResistorList from './CommonResistorList'
-import ResistorInputs from './ResistorInputs'
+import ResistorInputsContainer from './ResistorInputsContainer'
 import ResistorSchematic from './ResistorSchematic'
 
 class App extends Component {
@@ -15,7 +15,7 @@ class App extends Component {
 						<CommonResistorList />
 					</Col>
 					<Col sm="4">
-						<ResistorInputs />
+						<ResistorInputsContainer />
 					</Col>
 					<Col sm="3">
 						<ResistorSchematic />

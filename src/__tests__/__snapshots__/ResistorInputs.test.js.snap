@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders resistance values correctly 1`] = `
+<div>
+  <div>
+    <h4>
+      Inputs
+    </h4>
+    <hr />
+  </div>
+  <div>
+    <div
+      className="row form-group"
+    >
+      <label
+        className="col-sm-2 col-form-label"
+        htmlFor={undefined}
+      >
+        R
+        <sub>
+          equiv
+        </sub>
+      </label>
+      <div
+        className="col col-sm-10"
+      >
+        <input
+          className="form-control"
+          disabled={true}
+          type="number"
+          value={50}
+        />
+      </div>
+    </div>
+    <div
+      className="row form-group"
+    >
+      <label
+        className="col-sm-2 col-form-label"
+        htmlFor={undefined}
+      >
+        R
+        <sub>
+          1
+        </sub>
+      </label>
+      <div
+        className="col col-sm-10"
+      >
+        <input
+          className="form-control"
+          name="R1"
+          onChange={[Function]}
+          type="number"
+          value={100}
+        />
+      </div>
+    </div>
+    <div
+      className="row form-group"
+    >
+      <label
+        className="col-sm-2 col-form-label"
+        htmlFor={undefined}
+      >
+        R
+        <sub>
+          2
+        </sub>
+      </label>
+      <div
+        className="col col-sm-10"
+      >
+        <input
+          className="form-control"
+          name="R2"
+          onChange={[Function]}
+          type="number"
+          value={100}
+        />
+      </div>
+    </div>
+    <div
+      className="form-group"
+    >
+      <button
+        className="btn btn-primary"
+        onClick={[Function]}
+        type={undefined}
+      >
+        Seek
+      </button>
+    </div>
+  </div>
+</div>
+`;
