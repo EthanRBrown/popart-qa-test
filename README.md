@@ -6,7 +6,7 @@ This exercise is a simulation of a (very) small "calculator" project for a clien
 
 We've build this exercise with the hopes that it will be fun, engaging, and not take too much of your time.  We believe that you can show off your skill if you spend 1-2 hours on it, but depending on your experience and free time, you may wish to spend more time (certainly there's enough grist that you _could_ spend much more time, though we are not expecting it).
 
-There are technical components to the exercise which are optional; we don't expect everyone to have expertise in the [MERN](http://mern.io) stack or have expertise in writing Jest unit tests.  Furthermore, integration testing (using Selenium / Sauce Labs / Browserstack) can be very involved, so while we would welcome an example of an integration test, we realize that may be too involved for a pre-employment exercise, so use your own judgement.
+There are technical components to the exercise which are optional; we don't expect everyone to have expertise in the [MERN](http://mern.io) stack or have expertise in writing [Jest unit tests](https://facebook.github.io/jest/).  Furthermore, integration testing (using Selenium / Sauce Labs / Browserstack) can be very involved, so while we would welcome an example of an integration test, we realize that may be too involved for a pre-employment exercise, so use your own judgement.
 
 ## Your Task (Should You Choose to Accept It)
 
