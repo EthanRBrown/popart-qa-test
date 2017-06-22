@@ -11,6 +11,7 @@ There are technical components to the exercise which are optional; we don't expe
 ## Your Task (Should You Choose to Accept It)
 
 1. Review the [requirements for the project](/REQUIREMENTS.md).
+1. Check out the [project running on staging](http://qa.exercises.popart.com); it shouldn't take you long to spot some problems!
 1. Write a QA plan (you may use whatever format or tools you choose; imagine you are coming into an organization that has _no_ QA process, and you are responsible for establishing everything!).
 1. Execute (or partially execute) the QA plan; the project (intentionally) has flaws, and they should be uncovered by executing the QA plan.
 1. Review [ResitorInputs unit tests](/src/__tests__/ResistorInputs.test.js); what are these tests missing?  How would you coach the developer responsible for these unit tests? (If you aren't familiar with Jest, you may skip this.)
