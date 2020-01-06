@@ -1,0 +1,13 @@
+{
+   "index": "index.html",
+   "region": "us-west-2",
+   "uploadDir": "build",
+   "prefix": "",
+   "exclude": [],
+   "corsConfiguration": [],
+   "enableCloudfront": false,
+   "retries": 20,
+   "error": "index.html",
+   "domain": "resistance.zepln.com",
+   "configFile": ".s3-website.json"
+}

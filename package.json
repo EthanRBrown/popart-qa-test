@@ -15,12 +15,14 @@
   },
   "devDependencies": {
     "react-scripts": "1.0.7",
-    "react-test-renderer": "^15.6.1"
+    "react-test-renderer": "^15.6.1",
+    "s3-website": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "s3-website deploy"
   }
 }
