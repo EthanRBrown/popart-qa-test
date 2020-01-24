@@ -81,10 +81,10 @@ An example return value is:
 [
   {
     "sku": "9KJjH6xbbWLcdhr9H6KJiW",
-    "type: "R",
+    "type": "R",
     "tol": 5,
     "power": 0.25,
-    "value: 10000,
+    "value": 10000,
     "mfr": "Yageo",
     "unit_price": 0.012,
     "scp_score": 8,
