@@ -80,16 +80,16 @@ An example return value is:
 ```json
 [
   {
-    sku: '9KJjH6xbbWLcdhr9H6KJiW',
-    type: 'R',
-    tol: '5',
-    power: 0.25,
-    value: '10000',
-    mfr: 'Yageo',
-    unit_price: 0.012,
-    scp_score: 8,
-    in_stock: 22513,
-    in_process: 725,
+    "sku: "9KJjH6xbbWLcdhr9H6KJiW",
+    "type: "R",
+    "tol": 5,
+    "power": 0.25,
+    "value: 10000,
+    "mfr": "Yageo",
+    "unit_price": 0.012,
+    "scp_score": 8,
+    "in_stock": 22513,
+    "in_process": 725,
    },
    <...and so on>
 ```
