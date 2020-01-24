@@ -80,7 +80,7 @@ An example return value is:
 ```json
 [
   {
-    "sku: "9KJjH6xbbWLcdhr9H6KJiW",
+    "sku": "9KJjH6xbbWLcdhr9H6KJiW",
     "type: "R",
     "tol": 5,
     "power": 0.25,
