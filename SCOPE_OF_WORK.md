@@ -6,13 +6,13 @@ While there is no shortage of circuit simulators and printed reference material,
 
 A survey was conducted among EEs to obtain a list of common calculations that they would like to see in a "library" of tools to help them do their jobs.
 
-The calculator chosen for the pilot project was a parallel resistance calculator.  Out of 35 identified calcualtors, it was rated #10 in terms of importance/priority, but we have identified it as being the most feasible for a pilot, and the client agreed to start with this tool.
+The calculator chosen for the pilot project was a parallel resistance calculator.  Out of 35 identified calculators, it was rated #10 in terms of importance/priority, but we have identified it as being the most feasible for a pilot, and the client agreed to start with this tool.
 
-The technology team has created a proof-of-concept to ensure feasibility, and the business team has conducted client interviews to elicit requirements and preferences.
+The technology team has created a [proof-of-concept](http://resistance-calculator.valuedogs.net) to ensure feasibility, and the business team has conducted client interviews to elicit requirements and preferences.
 
 # Parallel Resistance
 
-A [_resistor_](https://en.wikipedia.org/wiki/Resistor) is a common electrical element that resists the flow of electricity.  Resistance is measurd in ohms (abbreviated by the Greek letter Omega - Ω) and resistors are manufactured in standard values derived from the ["E series of preferred numbers"](https://en.wikipedia.org/wiki/E_series_of_preferred_numbers).
+A [_resistor_](https://en.wikipedia.org/wiki/Resistor) is a common electrical element that resists the flow of electricity.  Resistance is measured in ohms (abbreviated by the Greek letter Omega - Ω) and resistors are manufactured in standard values derived from the ["E series of preferred numbers"](https://en.wikipedia.org/wiki/E_series_of_preferred_numbers).
 
 When resistors are used in parallel in a circuit, the equivalent resistance can be found by adding the reciprocals of the resistors placed in parallel and taking the reciprocal of the sum.  A full description (including a calculator) can be found at All About Circuits [Parallel Resistance Calculator](https://www.allaboutcircuits.com/tools/parallel-resistance-calculator/).
 
@@ -29,7 +29,7 @@ A survey was taken, and it was determined that the first situation occurs about 
 
 # Interview Excerpts
 
-The business team sumarized the following relevant exercpts from their interviews.
+The business team summarized the following relevant excerpts from their interviews.
 
 ## Kimberly Leannon, Engineering Manager
 
@@ -53,15 +53,15 @@ There's also a lot of specialized in-house knowledge and designs we have here.  
 
 ## Morris Champlin, Associate Engineer
 
-There are some third-party tools we use, and they're powerful, but let me tell you, they need to hire some designers, because they are UGLY.  And so many of them don't even display schematics, just input values and output tables.  I'm a very visual learner, and sometimes if there isn't a diagram, I sketch it out on a pad and write the values down just because it's easy for me to think about it that way.  All through school, we look at schematics, when other engineers give us designs or ideas, they use schematics...and these tools come along that are all text and numbers.  Not useful.  Another thing I hate is how hard it is to use standard SI prefxies.  With resistors in particular, most values we use are in the k or M range.  I hate programs that make me type 22000 instead of just 22k.  Or even worse, 1000000 instead of 1M.
+There are some third-party tools we use, and they're powerful, but let me tell you, they need to hire some designers, because they are UGLY.  And so many of them don't even display schematics, just input values and output tables.  I'm a very visual learner, and sometimes if there isn't a diagram, I sketch it out on a pad and write the values down just because it's easy for me to think about it that way.  All through school, we look at schematics, when other engineers give us designs or ideas, they use schematics...and these tools come along that are all text and numbers.  Not useful.  Another thing I hate is how hard it is to use standard SI prefixes.  With resistors in particular, most values we use are in the k or M range.  I hate programs that make me type 22000 instead of just 22k.  Or even worse, 1000000 instead of 1M.
 
 ## Tia Schaden, CTO
 
-Kimberly talked management into this project, but I have reservations.  Outsourcing engineering is expensive (and we should know, that's how we make our money), and this seems like a lot of money for some gimicky tools that our engineers can make do without.  I would personally like to see analytics built into the tools...maybe if I see a lot of adoption from the pilot, I'll change my tune.  If not, I can make an argument to kill the project.
+Kimberly talked management into this project, but I have reservations.  Outsourcing engineering is expensive (and we should know, that's how we make our money), and this seems like a lot of money for some gimmicky tools that our engineers can make do without.  I would personally like to see analytics built into the tools...maybe if I see a lot of adoption from the pilot, I'll change my tune.  If not, I can make an argument to kill the project.
 
 ## Jayce Larson, IT Manager
 
-We have a certificaiton process for third-party software.  I'm not really sure how this fits into the process, but one of the metrics on our scorecard is integration with our OAuth 2.0 single-sign-on (SSO) service.  If this software is access-controlled, I don't want our people to have to make up another insecure password.  I'm really trying to push SSO for all of our web applications.
+We have a certification process for third-party software.  I'm not really sure how this fits into the process, but one of the metrics on our scorecard is integration with our OAuth 2.0 single-sign-on (SSO) service.  If this software is access-controlled, I don't want our people to have to make up another insecure password.  I'm really trying to push SSO for all of our web applications.
 
 # Exhibit A: ERP API
 
