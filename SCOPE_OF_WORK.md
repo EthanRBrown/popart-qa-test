@@ -45,21 +45,21 @@ This project is a waste of time and money.  We have reference manuals and calcul
 
 I know this resistor calculator seems really corny to some people, but I'll tell you one reason it would really make my life easier.  I manage inventory for our range of products, and there's a lot of complexity stocking and sourcing electronics components.  We assign a "supply chain preference" score to every standard component, with 0 being "avoid using" and 10 representing "use with impunity".  I'm constantly having engineering send me prototype requests -- and sometimes even production designs -- with components that represent a sourcing headache or expense.  It results in a lot of back and forth asking them to change their designs, which burns a lot of hours on both sides.  If this calculator could just tie in with our ERP and suggest resistors with a high preference score, we might eliminate a lot of wasted effort.  IT tells me there's a REST API that would be easy to integrate with.
 
-# Lina Blanda, Associate Engineer
+## Lina Blanda, Associate Engineer
 
 I interviewed at Wolff before taking this job, and they showed me their engineering tools, which seemed really cool.  I took this job because they offered me a little more and the benefits are better, but I'm getting tired of rifling through the reference books on my shelf and generally feeling like I'm working with the same tools my dad had when he worked at Siemens.
 
 There's also a lot of specialized in-house knowledge and designs we have here.  I would love it if we had a really easy-to-navigate suite of tools to use that stuff...it would save me a lot of time and frustration.  The parallel resistance calculator sounds pretty boring in comparison, but I guess I do have a spreadsheet I made myself for that exact calculation, and it's not pretty or anything, just gets the job done.
 
-# Morris Champlin, Associate Engineer
+## Morris Champlin, Associate Engineer
 
 There are some third-party tools we use, and they're powerful, but let me tell you, they need to hire some designers, because they are UGLY.  And so many of them don't even display schematics, just input values and output tables.  I'm a very visual learner, and sometimes if there isn't a diagram, I sketch it out on a pad and write the values down just because it's easy for me to think about it that way.  All through school, we look at schematics, when other engineers give us designs or ideas, they use schematics...and these tools come along that are all text and numbers.  Not useful.
 
-# Tia Schaden, CTO
+## Tia Schaden, CTO
 
 Kimberly talked management into this project, but I have reservations.  Outsourcing engineering is expensive (and we should know, that's how we make our money), and this seems like a lot of money for some gimicky tools that our engineers can make do without.  I would personally like to see analytics built into the tools...maybe if I see a lot of adoption from the pilot, I'll change my tune.  If not, I can make an argument to kill the project.
 
-# Jayce Larson, IT Manager
+## Jayce Larson, IT Manager
 
 We have a certificaiton process for third-party software.  I'm not really sure how this fits into the process, but one of the metrics on our scorecard is integration with our OAuth 2.0 single-sign-on (SSO) service.  If this software is access-controlled, I don't want our people to have to make up another insecure password.  I'm really trying to push SSO for all of our web applications.
 
