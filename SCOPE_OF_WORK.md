@@ -91,7 +91,7 @@ An example return value is:
     "in_stock": 22513,
     "in_process": 725,
    },
-   <...and so on>
 ```
-  
+
+(only one result shown)
   
